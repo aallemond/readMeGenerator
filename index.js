@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+
 // TODO: Create an array of questions for user input
 const questions = [{
     type: 'input',
@@ -11,7 +12,7 @@ const questions = [{
         if (nameInput) {
             return true;
         } else {
-            console.log('Please enter your name! You must credit yourself for your work');
+            console.log('Please enter your name');
             return false;
         }
     }
@@ -24,7 +25,7 @@ const questions = [{
         if (githubInput) {
             return true;
         } else {
-            console.log('It is essential to link to your GitHub repo so users know where to find more of your work');
+            console.log('Please enter your GitHub username');
             return false;
         }
     }
@@ -37,7 +38,7 @@ const questions = [{
         if (emailInput) {
             return true;
         } else {
-            console.log('If anyone has questions about your project, you must provide a way for them to contact you');
+            console.log('Please enter a valid email address');
             return false;
         }
     }
@@ -50,7 +51,7 @@ const questions = [{
         if (titleInput) {
             return true;
         } else {
-            console.log('Every project must have a title. Please try again.');
+            console.log('Please enter a title for your Project');
             return false;
         }
     }
@@ -63,7 +64,7 @@ const questions = [{
         if (descriptionInput) {
             return true;
         } else {
-            console.log('It is essential to provide a description of your project. Not sure what to include? Head to the repo of this README generator and navigate to the section "Description: Questions to Consider" under the Guidelines header for some tips on writing a quality description.');
+            console.log('Please enter a description of your project.');
             return false;
         }
     }
@@ -76,7 +77,7 @@ const questions = [{
         if (installationInput) {
             return true;
         } else {
-            console.log('Please provide instructions for installation to ensure users have the proper software to run your program!');
+            console.log('Please provide instructions for installation.');
             return false;
         }
     }
@@ -89,7 +90,7 @@ const questions = [{
         if (usageInput) {
             return true;
         } else {
-            console.log('Providing instructions for usage will help users properly navigate your project. Please try again.');
+            console.log('Please provide instructions for usage of your project.');
             return false;
         }
     }
@@ -115,7 +116,7 @@ const questions = [{
         if (testsInput) {
             return true;
         } else {
-            console.log('Please provide instructions on how others can contribute to your project.');
+            console.log('Please provide details on any tests written for your application.');
             return false;
         }
     }

@@ -10,7 +10,6 @@ function renderLicenseBadge(license) {
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return 'https://lbesson.mit-license.org/'
@@ -23,14 +22,13 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// If there is no license, returns an empty string
 function renderLicenseSection(license) {
   if (!license) {
     return '';
   } else {
     return `## Licenses
-    This project is covered under the ${license} license. To learn more about what this means, click the license button at the top.`
+    This project is covered under the ${license} license.`
   }
 }
 
